@@ -9,7 +9,40 @@ def test_version():
     assert __version__ == '0.1.0'
 
 
-def test_append_1():
+def test_insert_4():
     ll = LinkedList()
-    ll.append(1)
-    assert ll.head.value == 1
+    ll.insert(4)
+    ll.append(-1)
+    assert ll.head.value == 4
+    assert ll.head.next.value == -1
+
+
+def test_append_1_s():
+    ll = LinkedList()
+    ll.insert(4)
+    ll.append(-1)
+    ll.append('s')
+    assert ll.head.value == 4
+    assert ll.head.next.value == -1
+    assert ll.head.next.next.value == 's'
+
+
+def test_includes():
+    ll = LinkedList()
+    ll.insert(4)
+    ll.append(-1)
+    assert ll.includes(4) == True
+    assert ll.includes(-1) == True
+    # assert ll.includes(5) == False
+
+
+def test_str():
+    ll =LinkedList()
+    ll.insert(4)
+    ll.append(-1)
+    ll.append('s')
+    assert str(ll) == '{ 4 } -> { -1} -> { s } -> Null'
+
+
+    
+
