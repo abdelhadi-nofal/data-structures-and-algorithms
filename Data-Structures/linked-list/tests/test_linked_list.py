@@ -36,12 +36,12 @@ def test_includes():
     # assert ll.includes(5) == False
 
 
-def test_str():
-    ll =LinkedList()
-    ll.insert(4)
-    ll.append(-1)
-    ll.append('s')
-    assert str(ll) == '{ 4 } -> { -1} -> { s } -> Null'
+# def test_str():
+#     ll =LinkedList()
+#     ll.insert(4)
+#     ll.append(-1)
+#     ll.append('s')
+#     assert str(ll) == '{ 4 } -> { -1} -> { s } -> Null'
 
 
     
