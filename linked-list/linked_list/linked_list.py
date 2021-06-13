@@ -19,22 +19,22 @@ ll: head - Node(4) -> Node(-1) -> Node('s') -> None
 class LinkedList:
     def __init__(self):
         self.head = None
-        self.linkedList=[]
+        self.nodesList=[]
 
     def insert(self, value):
         """
         Adds a node of a value to the head of LL
         """
+        self.value=None
         node = Node(value)
-        self.linkedList=[node.value]+self.linkedList
+        self.nodesList=[node.value]+self.nodesList
         if not self.head:
-            self.head = node
-        else:
-            current = self.head
-            while current.next != None:
-                current = current.next
-            current.next = node
-
+              self.head = node
+        else:         
+              current = self.head
+              self.head= node
+              self.head.next=current
+        
 
     def append(self, value):
         """
@@ -50,29 +50,27 @@ class LinkedList:
             current.next = node
 
 
-    def include(self, value):
+    def includes(self, value):
         """
         Return T/F if value is in the linked list or not
         """
-        
-        for value in self.linkedList:
+        x=False
+        for value in self.nodesList:
               if value==value:
-                 return True
-                
-              else:
-                  return False
+                  x=True
+                  break
+        return x
+                  
     
 
-    @staticmethod
+    
     def __str__():
         # "{ a } -> { b } -> { c } -> NULL"
         # Loop over all nodes
         # print all values in one line
         pass
 
-    def __repr__(self):
-        pass
-
+    
     
 
 if __name__ == "__main__":
