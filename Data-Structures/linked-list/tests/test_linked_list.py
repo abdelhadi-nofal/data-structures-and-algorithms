@@ -55,11 +55,11 @@ def test_linked_list_insert_before_first():
 
 def test_linked_list_insert_after_middle():
     ll = LinkedList()
-    ll.append('a')
-    ll.append('c')
-    ll.insertAfter('a', 'b')
+    ll.append(4)
+    ll.append(3)
+    ll.insertAfter(4, 2)
     actual = str(ll)
-    expected = "{ a } -> { b } -> { c } -> NULL"
+    expected = "{ 4 } -> { 2 } -> { 3 } -> NULL"
     assert actual == expected    
     
 
