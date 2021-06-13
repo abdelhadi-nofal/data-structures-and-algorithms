@@ -44,7 +44,7 @@ def test_print():
     
     assert str(ll) == '{4} ->{-1} ->{3} ->'
 
-def test_linked_list_insert_before_first():
+def test_linked_list_insert_before():
     ll = LinkedList()
     ll.append(4)
     ll.append(3)
@@ -53,7 +53,7 @@ def test_linked_list_insert_before_first():
     expected = "{2} ->{4} ->{3} ->"
     assert actual == expected
 
-def test_linked_list_insert_after_middle():
+def test_linked_list_insert_after():
     ll = LinkedList()
     ll.append(4)
     ll.append(3)
