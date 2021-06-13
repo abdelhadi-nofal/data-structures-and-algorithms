@@ -36,11 +36,11 @@ class LinkedList:
               self.head.next=current
         
 
-    def append(self, value):
+    def append(self, added):
         """
         Adds a node of a value to the end of LL
         """
-        node = Node(value)
+        node = Node(added)
         if not self.head:
             self.head = node
         else:
@@ -70,8 +70,15 @@ class LinkedList:
         print all values in one line
         { a } -> { b } -> { c } -> NULL
         """
-           
-        pass
+        current = self.head
+        output = ''
+        while current:
+            output += f"{ {(current.value)} } ->"
+            current = current.next
+            
+        return output
+
+        
    
 
     
