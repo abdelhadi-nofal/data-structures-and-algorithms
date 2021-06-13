@@ -49,6 +49,44 @@ class LinkedList:
                 current = current.next
             current.next = node
 
+    def insertBefore(self, value, newVal):
+        """
+        Add a new node with the given newValue immediately before the first value node
+        """
+        current = self.head
+
+        if current.value is value:
+            self.insert(newVal)
+            return
+            
+        while current:
+            if current.next.value is value:
+                node = Node(newVal, current.next)
+                current.next = node
+                return
+            current = current.next
+        raise Exception(f"Value {{ {value} }} not present in list")
+
+
+    def insertAfter(self ,value, newVal) :
+
+        """
+        Add a new node with the given newValue immediately after the first value node
+
+        """
+        current = self.head
+
+        while current:
+            if current.value is value:
+                node = Node(newVal, current.next)
+                current.next = node
+                return
+            current = current.next
+
+        raise Exception(f"Value {{ {value} }} not present in list")
+
+
+
 
     def includes(self, value):
         """
@@ -98,9 +136,13 @@ if __name__ == "__main__":
     # next of head (next of Node(4)) is Null
     ll.append(-1)
     ll.append('s')
+    # ll.insertAfter(10,"Tala")
+    # ll.insertBefore("Tala","One")
     # I have ll: head - Node(4) -> Node(-1) -> Node('s') -> None
     print(ll.head.value)
     print(ll.head.next.value)
     print(ll.head.next.next.value)
     print(str(ll))
+    
+    
     
