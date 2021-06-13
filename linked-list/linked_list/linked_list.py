@@ -64,11 +64,15 @@ class LinkedList:
     
 
     
-    def __str__():
-        # "{ a } -> { b } -> { c } -> NULL"
-        # Loop over all nodes
-        # print all values in one line
+    def __str__(self):
+        """
+        Loop over all nodes
+        print all values in one line
+        { a } -> { b } -> { c } -> NULL
+        """
+           
         pass
+   
 
     
     
@@ -91,3 +95,5 @@ if __name__ == "__main__":
     print(ll.head.value)
     print(ll.head.next.value)
     print(ll.head.next.next.value)
+    print(str(ll))
+    
