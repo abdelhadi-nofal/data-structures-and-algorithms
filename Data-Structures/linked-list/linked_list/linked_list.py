@@ -123,21 +123,12 @@ class LinkedList:
     
 
 if __name__ == "__main__":
-    # Instances of Node
-    n1 = Node(34)
-    n2 = Node('Suhaib')
-    n3 = Node(True)
-    print(n2.value)
-
-
     ll = LinkedList()
     # Value of first node on head
     ll.append(4)
     # next of head (next of Node(4)) is Null
     ll.append(-1)
     ll.append('s')
-    # ll.insertAfter(10,"Tala")
-    # ll.insertBefore("Tala","One")
     # I have ll: head - Node(4) -> Node(-1) -> Node('s') -> None
     print(ll.head.value)
     print(ll.head.next.value)
