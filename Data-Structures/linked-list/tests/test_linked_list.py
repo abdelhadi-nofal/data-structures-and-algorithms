@@ -32,8 +32,8 @@ def test_includes():
     ll.insert(4)
     ll.append(-1)
     assert ll.includes(4) == True
-    assert ll.includes(-1) == True
-    # assert ll.includes(5) == False
+    assert ll.includes(-1) == False
+    assert ll.includes(5) == False
 
 
 def test_print():
