@@ -68,7 +68,7 @@ class LinkedList:
                 current.next = node
                 return node
             else:
-                return (f'Node with value of {value} does not exist')
+                return ('Node not exist')
         current = current.next
         
 
@@ -87,7 +87,7 @@ class LinkedList:
                 current.next = node
                 return node
             if current.next == None:
-                return (f'Node with value of {value} does not exist')
+                return ('Node not exist')
             current = current.next
 
         raise Exception(f"Value {{ {value} }} not present in list")
@@ -105,6 +105,7 @@ class LinkedList:
             x=True
             return x
         else:
+            x = False
             return x
 
                   
