@@ -96,18 +96,17 @@ class LinkedList:
 
 
 
-
-
     def includes(self, value):
         """
         Return T/F if value is in the linked list or not
         """
         x=False
-        for value in self.nodesList:
-              if value==value:
-                  x=True
-                  break
-        return x
+        if value in self.nodesList:
+            x=True
+            return x
+        else:
+            return x
+
                   
     
 

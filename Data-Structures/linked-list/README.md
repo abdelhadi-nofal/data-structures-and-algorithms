@@ -26,6 +26,15 @@ What approach did you take? Why? What is the Big O space/time for this approach?
 
 In computer science, a linked list is a linear collection of data elements whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together represent a sequence. In its most basic form, each node contains: data, and a reference (in other words, a link) to the next node in the sequence. This structure allows for efficient insertion or removal of elements from any position in the sequence during iteration. More complex variants add additional links, allowing more efficient insertion or removal of nodes at arbitrary positions. A drawback of linked lists is that access time is linear (and difficult to pipeline). Faster access, such as random access, is not feasible. Arrays have better cache locality compared to linked lists.
 
+## Code Challenge #5
+
+Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
+Within your LinkedList class, include a head property. Upon instantiation, an empty Linked List should be created.
+Define a method called insert which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
+Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+Define a method called toString (or **str** in Python) which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
+"{ a } -> { b } -> { c } -> NULL"
+
 ## Code Challenge #6
 
 Write the following methods for the Linked List class:
