@@ -47,3 +47,5 @@ Write the following methods for the Linked List class:
 Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges. k-th value from the end of a linked list.
 
 ![](/linked-list/khf.jpg)
+![image](https://user-images.githubusercontent.com/79086986/121959233-3046ae80-cd6d-11eb-82f3-015fbe19d148.png)
+
