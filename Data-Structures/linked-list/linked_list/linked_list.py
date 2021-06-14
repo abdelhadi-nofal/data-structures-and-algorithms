@@ -51,39 +51,49 @@ class LinkedList:
 
     def insertBefore(self, value, newVal):
         """
-        Add a new node with the given newValue immediately before the first value node
+        Inserts a new node before a given node value
         """
-        current = self.head
 
-        if current.value is value:
-            self.insert(newVal)
-            return
-            
-        while current:
-            if current.next.value is value:
-                node = Node(newVal, current.next)
+        current = self.head
+        node = Node(newVal)
+
+        if current.value == value:
+            node.next = current
+            self.head = node
+            return node
+
+        while current.next:
+            if current.next.value == value:
+                node.next = current.next
                 current.next = node
-                return
-            current = current.next
-        raise Exception(f"Value {{ {value} }} not present in list")
+                return node
+            else:
+                return (f'Node with value of {value} does not exist')
+        current = current.next
+        
 
 
     def insertAfter(self ,value, newVal) :
 
         """
         Add a new node with the given newValue immediately after the first value node
-
         """
         current = self.head
-
+        node = Node(newVal)
+                
         while current:
-            if current.value is value:
-                node = Node(newVal, current.next)
+            if current.value == value:
+                node.next = current.next
                 current.next = node
-                return
+                return node
+            if current.next == None:
+                return (f'Node with value of {value} does not exist')
             current = current.next
 
         raise Exception(f"Value {{ {value} }} not present in list")
+
+
+
 
 
 
@@ -117,6 +127,31 @@ class LinkedList:
             
         return output
 
+
+    def kthFromEnd(self, k):
+        """
+        Returns the nth value of the Linkedlist starting from the end
+        """
+        current = self.head
+        cnt = 0
+        while current:
+            cnt += 1
+            current = current.next
+        
+        reverse_idx = cnt - k -1
+        
+        cnt = 0
+        current = self.head
+        if reverse_idx < 0:
+            return 'Exception'
+        else:
+            while current:
+                if cnt == reverse_idx:
+                    return current.value
+                cnt += 1
+                current = current.next
+
+
         
    
 
@@ -131,13 +166,19 @@ if __name__ == "__main__":
     ll.append(-1)
     ll.append('s')
     ll.insertBefore(4, 5)
-    # ll.insertBefore(-1, 9)
-    # ll.insertBefore('s', 8)
+    ll.insertBefore(-1, 9)
+    ll.insertAfter(4, 8)
+    ll.insertAfter(-1, 98)
+    
     # I have ll: head - Node(4) -> Node(-1) -> Node('s') -> None
     print(ll.head.value)
     print(ll.head.next.value)
     print(ll.head.next.next.value)
     print(str(ll))
+    print(ll.kthFromEnd(0))
+    print(ll.kthFromEnd(1))
+    print(ll.kthFromEnd(2))
+
     
     
     
