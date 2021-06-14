@@ -90,8 +90,6 @@ class LinkedList:
                 return ('Node not exist')
             current = current.next
 
-        raise Exception(f"Value {{ {value} }} not present in list")
-
 
 
 
