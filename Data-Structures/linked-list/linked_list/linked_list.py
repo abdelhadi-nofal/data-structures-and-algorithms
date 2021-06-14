@@ -129,6 +129,9 @@ if __name__ == "__main__":
     # next of head (next of Node(4)) is Null
     ll.append(-1)
     ll.append('s')
+    ll.insertBefore(4, 5)
+    # ll.insertBefore(-1, 9)
+    ll.insertBefore('s', 8)
     # I have ll: head - Node(4) -> Node(-1) -> Node('s') -> None
     print(ll.head.value)
     print(ll.head.next.value)

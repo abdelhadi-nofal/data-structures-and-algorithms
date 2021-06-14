@@ -57,9 +57,9 @@ def test_linked_list_insert_after():
     ll = LinkedList()
     ll.append(4)
     ll.append(3)
-    ll.insertAfter(4, 2)
+    ll.insertAfter(3, 7)
     actual = str(ll)
-    expected = "{ 4 } -> { 2 } -> { 3 } -> NULL"
+    expected = "{4} -> {3} ->{7} ->"
     assert actual == expected    
     
 
