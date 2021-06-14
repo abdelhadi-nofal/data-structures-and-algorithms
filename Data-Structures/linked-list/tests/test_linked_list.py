@@ -59,8 +59,36 @@ def test_linked_list_insert_after():
     ll.append(3)
     ll.insertAfter(3, 7)
     actual = str(ll)
-    expected = "{4} -> {3} ->{7} ->"
-    assert actual == expected    
+    expected = "{4} ->{3} ->{7} ->NULL"
+    assert actual == expected  
+
+
+def test_linked_list_kthFromEnd():
+    ll = LinkedList()
+    ll.append(4)
+    ll.append(-1)
+    ll.append('s')
+    ll.insertBefore(4, 5)
+    ll.insertBefore(-1, 9)
+    ll.insertAfter(4, 8)
+    ll.insertAfter(-1, 98) 
+    actual = (ll.kthFromEnd(0))  
+    expected= "s"
+    assert actual == expected
+    
+
+def test_linked_list_kthFromEnd():
+    ll = LinkedList()
+    ll.append(4)
+    ll.append(-1)
+    ll.append('s')
+    ll.insertBefore(4, 5)
+    ll.insertBefore(-1, 9)
+    ll.insertAfter(4, 8)
+    ll.insertAfter(-1, 98)  
+    actual = (ll.kthFromEnd(1))
+    expected= 98
+    assert actual == expected
     
 
 
