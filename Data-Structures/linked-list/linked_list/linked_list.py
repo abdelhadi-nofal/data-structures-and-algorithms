@@ -113,6 +113,7 @@ class LinkedList:
         while current:
             output += f"{ {(current.value)} } ->"
             current = current.next
+        output+='NULL'
             
         return output
 
@@ -131,7 +132,7 @@ if __name__ == "__main__":
     ll.append('s')
     ll.insertBefore(4, 5)
     # ll.insertBefore(-1, 9)
-    ll.insertBefore('s', 8)
+    # ll.insertBefore('s', 8)
     # I have ll: head - Node(4) -> Node(-1) -> Node('s') -> None
     print(ll.head.value)
     print(ll.head.next.value)
