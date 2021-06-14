@@ -25,3 +25,14 @@ What approach did you take? Why? What is the Big O space/time for this approach?
 ## Linked_List
 
 In computer science, a linked list is a linear collection of data elements whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together represent a sequence. In its most basic form, each node contains: data, and a reference (in other words, a link) to the next node in the sequence. This structure allows for efficient insertion or removal of elements from any position in the sequence during iteration. More complex variants add additional links, allowing more efficient insertion or removal of nodes at arbitrary positions. A drawback of linked lists is that access time is linear (and difficult to pipeline). Faster access, such as random access, is not feasible. Arrays have better cache locality compared to linked lists.
+
+## Code Challenge #6
+
+Write the following methods for the Linked List class:
+
+1. InsertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node.
+2. InsertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node.
+
+## Code Challenge #7
+
+Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges. k-th value from the end of a linked list.
