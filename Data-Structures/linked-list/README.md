@@ -49,3 +49,18 @@ Write a method for the Linked List class which takes a number, k, as a parameter
 ![](/linked-list/khf.jpg)
 ![image](https://user-images.githubusercontent.com/79086986/121959233-3046ae80-cd6d-11eb-82f3-015fbe19d148.png)
 
+## Code Chaallenge # 8
+
+# Challenge Summary
+
+Write a function called zipLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. Try and keep additional space down to O(1). You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+## Whiteboard Process ,Solution
+
+<!-- Embedded whiteboard image -->
+
+## Approach & Efficiency
+
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+big_O is a Python module to estimate the time complexity of Python code from its execution time. It can be used to analyze how functions scale with inputs of increasing size. big_O executes a Python function for input of increasing size N , and measures its execution time.
