@@ -151,31 +151,67 @@ class LinkedList:
 
 
         
-   
+def zipLists(ll1, ll2):
+    current1 = ll1.head
+    current2 = ll2.head
+    while current1 and current2:
+        save1 = current1.next
+        save2 = current2.next
+
+        current1.next = current2
+        current2.next = save1
+
+        current1 = save1
+        current2 = save2
+
+    return ll1
+
 
     
     
 
 if __name__ == "__main__":
-    ll = LinkedList()
-    # Value of first node on head
-    ll.append(4)
-    # next of head (next of Node(4)) is Null
-    ll.append(-1)
-    ll.append('s')
-    ll.insertBefore(4, 5)
-    ll.insertBefore(-1, 9)
-    ll.insertAfter(4, 8)
-    ll.insertAfter(-1, 98)
+    # ll = LinkedList()
+    # # Value of first node on head
+    # ll.append(4)
+    # # next of head (next of Node(4)) is Null
+    # ll.append(-1)
+    # ll.append('s')
+    # ll.insertBefore(4, 5)
+    # ll.insertBefore(-1, 9)
+    # ll.insertAfter(4, 8)
+    # ll.insertAfter(-1, 98)
     
-    # I have ll: head - Node(4) -> Node(-1) -> Node('s') -> None
-    print(ll.head.value)
-    print(ll.head.next.value)
-    print(ll.head.next.next.value)
-    print(str(ll))
-    print(ll.kthFromEnd(0))
-    print(ll.kthFromEnd(1))
-    print(ll.kthFromEnd(2))
+    # # I have ll: head - Node(4) -> Node(-1) -> Node('s') -> None
+    # print(ll.head.value)
+    # print(ll.head.next.value)
+    # print(ll.head.next.next.value)
+    # print(str(ll))
+    # print(ll.kthFromEnd(0))
+    # print(ll.kthFromEnd(1))
+    # print(ll.kthFromEnd(2))
+
+    ll1= LinkedList()
+    ll1.append(4)
+    ll1.append(-1)
+    ll1.append('s')
+    ll1.insertBefore(4, 5)
+    ll1.insertAfter(-1, 98)
+
+
+    print(ll1)
+    # print(ll1.head)
+
+    ll2= LinkedList()
+    ll2.append(7)
+    ll2.append(-8)
+
+    ll2.insertAfter(7, 8)
+    print(ll2)
+
+    zip_ll = zipLists(ll1,ll2)
+    print(zip_ll)
+
 
     
     
