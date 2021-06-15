@@ -59,6 +59,9 @@ Write a function called zipLists which takes two linked lists as arguments. Zip 
 
 <!-- Embedded whiteboard image -->
 
+![image](https://user-images.githubusercontent.com/79086986/122129555-f5ad4680-ce3e-11eb-9b71-741fe02b84b4.png)
+
+
 ## Approach & Efficiency
 
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
