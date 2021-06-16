@@ -59,7 +59,7 @@ Write a function called zipLists which takes two linked lists as arguments. Zip 
 
 <!-- Embedded whiteboard image -->
 
-![image](https://user-images.githubusercontent.com/79086986/122129555-f5ad4680-ce3e-11eb-9b71-741fe02b84b4.png)
+![image](https://user-images.githubusercontent.com/79086986/122259617-08755900-cedb-11eb-80dc-16f84856a9ca.png)
 
 
 ## Approach & Efficiency
