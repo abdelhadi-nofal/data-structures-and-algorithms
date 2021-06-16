@@ -152,7 +152,65 @@ class LinkedList:
 
         
 
+def reverse_list(rand_list):
+        # em_list = []
+        # re_list=[]
+        prev = None
+        current = rand_list.head
+        while(current != None):
+            # if current:
+                # em_list +=[current.value]
+                next = current.next
+                current.next = prev
+                prev = current
+                current = next
+                
+                
+        rand_list.head = prev
+        return rand_list
+        # for x in reversed(em_list):
+            
+        #     re_list.append(x)
 
+
+        # print(rand_list)
+        # print(re_list)
+
+
+def ispalindrome(rand_list):
+        in_list = []
+        re_list=[]
+        
+
+        current=rand_list.head
+        while(current != None):
+            if current:
+                in_list +=[current.value]
+                current = current.next
+
+        for x in reversed(in_list):
+            
+            re_list.append(x)
+
+        if in_list == re_list:
+            return True
+        else:
+            return False    
+
+def zipLists(ll1, ll2):
+    current1 = ll1.head
+    current2 = ll2.head
+    while current1 and current2:
+        save1 = current1.next
+        save2 = current2.next
+
+        current1.next = current2
+        current2.next = save1
+
+        current1 = save1
+        current2 = save2
+
+    return ll1
 
 
 
