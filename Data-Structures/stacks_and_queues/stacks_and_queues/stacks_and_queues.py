@@ -22,10 +22,10 @@ class Stack :
         Returns its value
         """       
         if self.top:
-            new_top = self.top
+            temp = self.top
             self.top = self.top.next
-            new_top.next = None
-            return new_top.value
+            temp.next = None
+            return temp.value
         else:
             raise AttributeError('Stack is Empty')
 
@@ -58,11 +58,11 @@ class Queue:
         Add to the front og the Queue
         """
         node = Node(value)
-        if not self.rear:
-            self.front = node
+        if self.front:
+            self.rear.next = node
             self.rear = node
         else:
-            self.rear.next = node
+            self.front = node
             self.rear = node
 
 
