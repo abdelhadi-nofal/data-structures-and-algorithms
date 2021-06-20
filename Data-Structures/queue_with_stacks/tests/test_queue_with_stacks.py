@@ -12,7 +12,7 @@ def test_enqueue():
     pseudoq.enqueue(1)
     pseudoq.enqueue(2)
     pseudoq.enqueue(3)
-    assert pseudoq.output.peek() == 1
+    assert pseudoq.stack2.peek() == 1
 
 
 def test_dequeue():
@@ -24,7 +24,7 @@ def test_dequeue():
     pseudo.dequeue()
     pseudo.dequeue()
     pseudo.dequeue()
-    assert pseudo.output.peek() == 4
+    assert pseudo.stack2.peek() == 4
 
 
 

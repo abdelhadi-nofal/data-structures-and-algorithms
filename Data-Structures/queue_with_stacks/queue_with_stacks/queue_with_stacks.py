@@ -34,19 +34,19 @@ class PseudoQueue:
     standard queue class
     """
     def __init__(self):
-        self.stack2 = Stack()
         self.stack1 = Stack()
+        self.stack2 = Stack()
     
     
     def enqueue(self, value):
 
-        while self.stack2.top:
-            self.stack1.push(self.stack2.pop())
-            
-        self.stack2.push(value)
-
-        while self.stack1.top:
-            self.stack2.push(self.stack1.pop())
+        node = Node(value)
+        if self.stack2.top:
+            self.stack1.top.next = node
+            self.stack1.top = node
+        else:
+            self.stack2.top = node
+            self.stack1.top = node
         
 
         
