@@ -13,8 +13,8 @@ class Stack :
         Adds to the top of the stack
         """
         node = Node(value)
+        node.next = self.top
         self.top = node
-        self.top.next = None   
 
     def pop(self):
         """

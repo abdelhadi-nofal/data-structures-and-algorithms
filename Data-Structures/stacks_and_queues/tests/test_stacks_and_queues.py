@@ -18,7 +18,7 @@ def test_stack_pop(stack_3vals):
     actual = stack_3vals.pop()
     expected = 'd'
     assert actual == expected
-    # assert stack_3vals.top.value == -1
+    assert stack_3vals.top.value == -1
 
 def test_stack_peek(stack_3vals):
     actual = stack_3vals.peek()
