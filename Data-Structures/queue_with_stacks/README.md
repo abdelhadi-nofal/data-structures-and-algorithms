@@ -15,3 +15,36 @@ The Stack instances have only push, pop, and peek methods. You should use your o
 ## Approach & Efficiency
 
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+time O(1)
+space O(1)
+
+## Solution
+
+<!-- Show how to run your code, and examples of it in action -->
+
+```
+class PseudoQueue:
+    """
+    standard queue class
+    """
+    def __init__(self):
+        self.stack1 = Stack()
+        self.stack2 = Stack()
+
+
+    def enqueue(self, value):
+
+
+        while self.stack2.top:
+            self.stack1.push(self.stack2.pop())
+
+        self.stack2.push(value)
+
+        while self.stack1.top:
+            self.stack2.push(self.stack1.pop())
+
+
+    def dequeue(self):
+        return self.stack2.pop()
+```
