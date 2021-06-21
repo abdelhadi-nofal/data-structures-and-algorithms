@@ -11,6 +11,9 @@ dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then
 
 <!-- Embedded whiteboard image -->
 
+![image](https://user-images.githubusercontent.com/79086986/122821280-4dd3c500-d2e5-11eb-9f03-b27a6524d7c1.png)
+
+
 ## Approach & Efficiency
 
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
