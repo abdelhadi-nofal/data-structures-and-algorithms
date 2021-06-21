@@ -11,6 +11,8 @@ The Stack instances have only push, pop, and peek methods. You should use your o
 ## Whiteboard Process
 
 <!-- Embedded whiteboard image -->
+![image](https://user-images.githubusercontent.com/79086986/122828827-d4d96b00-d2ee-11eb-8b86-4550a471a062.png)
+
 
 ## Approach & Efficiency
 
