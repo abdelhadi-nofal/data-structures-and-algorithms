@@ -9,12 +9,12 @@ def test_version():
 
 def test_enqueue_cats_and_dogs():
     shelter = AnimalShelter()
-    shelter.enqueue('dog')
-    shelter.enqueue('cat')
-    shelter.enqueue('dog')
-    shelter.enqueue('cat')
+    shelter.enqueue('spike','dog')
+    shelter.enqueue('sahsa','cat')
+    shelter.enqueue('spike2','dog')
+    shelter.enqueue('cherry','cat')
     shelter.dequeue()
-    assert shelter.front.value == 'cat'
+    assert shelter.front.name == 'sahsa'
 
 
 # def test_enqueue_other_animals():
