@@ -8,6 +8,9 @@ Curly Brackets : {}
 
 ## Whiteboard Process
 
+![image](https://user-images.githubusercontent.com/79086986/122997611-dbcab100-d3b4-11eb-8bf9-03023d9e89e8.png)
+
+
 ## Approach & Efficiency
 
 time O(1) space O(1)
