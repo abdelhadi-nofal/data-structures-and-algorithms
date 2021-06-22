@@ -23,18 +23,25 @@ class AnimalShelter:
             self.rear = new_animal
 
 
-    def dequeue(self):
+    def dequeue(self,pref):
         """
         Remove the front node from the Queue
         Returns it`s value
         """
-        if self.front == None:
-            raise AttributeError('Shelter is Empty')
-        else:
+        if self.front.type == pref:
+        # if self.front == None:
+        #     raise AttributeError('Shelter is Empty')
+        # else:
             temp = self.front
             self.front = self.front.next
             temp.next = None
             return temp.name
+        else :
+            current =self.front
+            while self.front.type != pref :
+                current = current.next
+            return current.name
+
 
 
 
@@ -43,5 +50,5 @@ shelter.enqueue('spike','dog')
 shelter.enqueue('sahsa','cat')
 shelter.enqueue('spike2','dog')
 shelter.enqueue('cherry','cat')
-shelter.dequeue()
+shelter.dequeue('dog')
 print(shelter.front.name)
