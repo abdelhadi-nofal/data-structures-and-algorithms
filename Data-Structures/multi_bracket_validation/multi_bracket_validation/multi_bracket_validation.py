@@ -21,3 +21,15 @@ def multi_bracket_validation(input):
 
   else:
     return (False)
+
+
+if __name__ == "__main__":
+
+    print(multi_bracket_validation('{}'))
+    print(multi_bracket_validation('{}(){}'))
+    print(multi_bracket_validation('()[[Extra Characters]]'))
+    print(multi_bracket_validation('(){}[[]]'))
+    print(multi_bracket_validation('{}{Code}[Fellows](())'))
+    print(multi_bracket_validation('[({}]'))
+    print(multi_bracket_validation('(]('))
+    print(multi_bracket_validation('{(})'))
