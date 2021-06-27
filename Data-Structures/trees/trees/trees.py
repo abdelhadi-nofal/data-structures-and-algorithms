@@ -83,17 +83,32 @@ class Binary_Search_Tree(Binary_Tree):
         return traverse(self.root)
 
 
-# if __name__ == "__main__":
-#     bst = Binary_Search_Tree()
-#     bst.add(10)
-#     bst.add(8)
-#     bst.add(17)
-#     bst.add(23)
-#     bst.add(3)
-#     bst.add(-1)
-#     bst.add(50)
-#     bst.add(34)
-#     print(bst.post_order())
+    def max_value(self):
+        maxv = 0
+        def traverse(node):
+            nonlocal maxv
+            if node:
+                if node.value > maxv:
+                    maxv = node.value
+                traverse(node.left)
+                traverse(node.right)
+    
+        traverse(self.root)
+        return maxv
+
+
+if __name__ == "__main__":
+    bst = Binary_Search_Tree()
+    bst.add(10)
+    bst.add(8)
+    bst.add(17)
+    bst.add(23)
+    bst.add(3)
+    bst.add(-1)
+    bst.add(50)
+    bst.add(34)
+    print(bst.max_value())
+    print(bst.post_order())
 
 
         

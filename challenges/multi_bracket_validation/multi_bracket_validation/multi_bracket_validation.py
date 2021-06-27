@@ -13,10 +13,10 @@ def multi_bracket_validation(input):
 
     return (False)
 
-  if (len(open_sqr) == len(close_sqr)) and (len(open_sqr) == len(close_sqr) and len(close_para) == len(open_para)) and (len(open_sqr) == len(close_sqr) and len(close_para) ==len(open_para) and len(close_cur) == len(open_cur))  :
+  if  (len(open_sqr) == len(close_sqr) and len(close_para) ==len(open_para) and len(close_cur) == len(open_cur))  :
     return (True)
 
-  elif (len(open_sqr) != len(close_sqr)) or (len(open_sqr) == len(close_sqr) and len(close_para) != len(open_para)) or (len(open_sqr) == len(close_sqr) and len(close_para) !=len(open_para) and len(close_cur) == len(open_cur)):
+  elif (len(open_sqr) != len(close_sqr)) or len(close_para) != len(open_para) or  len(close_cur) == len(open_cur):
     return (False)
 
   else:
