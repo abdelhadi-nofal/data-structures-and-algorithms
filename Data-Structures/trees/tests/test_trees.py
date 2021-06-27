@@ -23,7 +23,7 @@ def test_post_order():
     assert actual == expected
 
 
-def test_traverse_postorder():
+def test_traverse_postorder_max_value():
     bst = Binary_Search_Tree()
     bst.add(10)
     bst.add(8)
@@ -35,6 +35,7 @@ def test_traverse_postorder():
     bst.add(34)
     assert bst.contains(10) == True
     assert bst.post_order() == [-1, 3, 8, 34, 50, 23, 17, 10]
+    assert bst.max_value() == 50
 
 
 
@@ -42,6 +43,7 @@ def test_contains():
     bin_tree = Binary_Search_Tree()
     bin_tree.add(10)
     assert bin_tree.contains(10) == True
+    assert bin_tree.max_value() == 10
 
 
 a = Node("A")
