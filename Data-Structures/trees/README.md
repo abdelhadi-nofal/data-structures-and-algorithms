@@ -71,3 +71,5 @@ contains Returns boolean indicating whether or not the value is in the tree at l
 ## White Board 17
 
 ![](/trees/tree.jpg)
+![image](https://user-images.githubusercontent.com/79086986/123711934-f94abf80-d879-11eb-8e44-ea1072490579.png)
+
