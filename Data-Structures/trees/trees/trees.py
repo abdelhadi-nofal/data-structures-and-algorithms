@@ -46,6 +46,38 @@ class Binary_Tree:
         traverse(self.root)
         return output
 
+    def max_value(self):
+        maxv = 0
+        def traverse(node):
+            nonlocal maxv
+            if node:
+                if node.value > maxv:
+                    maxv = node.value
+                traverse(node.left)
+                traverse(node.right)
+    
+        traverse(self.root)
+        return maxv
+
+    def breadth_first(self):
+        
+        output = []
+        
+        queue = []
+        queue.append(self.root)
+        
+        while queue:
+            node = queue.pop(0)
+            output.append(node.value)
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
+            if not queue:
+                break
+
+        return output
+
 
 
 
@@ -83,32 +115,27 @@ class Binary_Search_Tree(Binary_Tree):
         return traverse(self.root)
 
 
-    def max_value(self):
-        maxv = 0
-        def traverse(node):
-            nonlocal maxv
-            if node:
-                if node.value > maxv:
-                    maxv = node.value
-                traverse(node.left)
-                traverse(node.right)
-    
-        traverse(self.root)
-        return maxv
+
+
 
 
 if __name__ == "__main__":
     bst = Binary_Search_Tree()
     bst.add(10)
-    bst.add(8)
-    bst.add(17)
-    bst.add(23)
-    bst.add(3)
-    bst.add(-1)
-    bst.add(50)
-    bst.add(34)
-    print(bst.max_value())
-    print(bst.post_order())
+    bst.add(5)
+    bst.add(14)
+    bst.add(1)
+    bst.add(7)
+    bst.add(12)
+    bst.add(16)
+    bst.add(6)
+
+
+    # print(bst.max_value())
+    # print(bst.pre_order())
+    # print(bst.in_order())
+    # print(bst.post_order())
+    print(bst.breadth_first())
 
 
         
