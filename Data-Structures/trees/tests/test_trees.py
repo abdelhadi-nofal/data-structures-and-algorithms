@@ -22,6 +22,11 @@ def test_post_order():
     expected = ['D', 'E', 'B', 'F', 'C', 'A']
     assert actual == expected
 
+def test_breadth_first():
+    actual = tree.breadth_first()
+    expected = ['A', 'B', 'C', 'D', 'E', 'F']
+    assert actual == expected
+
 
 def test_traverse_postorder_max_value():
     bst = Binary_Search_Tree()
