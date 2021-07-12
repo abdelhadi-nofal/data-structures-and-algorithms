@@ -9,6 +9,9 @@ space <- O(n)
 
 ## White Board
 
+![image](https://user-images.githubusercontent.com/79086986/125357608-81e45800-e370-11eb-976d-9514371ff542.png)
+
+
 ## Code
 
 ```
