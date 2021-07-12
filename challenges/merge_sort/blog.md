@@ -12,3 +12,5 @@ returns [4,8,15,16,23,42]
 ```
 
 ## Solution Step By Step
+
+![image](https://user-images.githubusercontent.com/79086986/125357488-61b49900-e370-11eb-9de1-b5539e10b68a.png)
