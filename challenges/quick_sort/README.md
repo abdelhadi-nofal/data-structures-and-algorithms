@@ -9,6 +9,9 @@ space <- O(log n)
 
 ## White Board
 
+![image](https://user-images.githubusercontent.com/79086986/125532889-96c72044-73f3-4ba9-84eb-c4828e76b4e6.png)
+
+
 ## Code
 
 ```
