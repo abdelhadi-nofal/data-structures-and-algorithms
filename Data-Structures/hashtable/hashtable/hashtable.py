@@ -5,32 +5,32 @@ class HashTable:
     
     def __init__(self, size=1024):
         self.size = size
-        self._buckets = [None] * size
+        self.map = [None] * size
 
     
-    def _hash(self, key):
-        sum = 0
-        for i in key:
-            sum += ord(i)
-
-        sum = sum * 199 # using a prime number but could be anything you want like ascii of first char
-
-        return sum % self.size
+    def hash(self, key):
+        sum_of_asccii = 0
+        for ch in key:
+            asccii_of_ch = ord(ch)
+            sum_of_asccii += asccii_of_ch
+        temp_value = sum_of_asccii * 19
+        hashed_key = temp_value % self.size
+        return hashed_key
 
         
     def add(self, key, value):
 
         hashed_key = self._hash(key)
 
-        if not self._buckets[hashed_key]:
-           self._buckets[hashed_key] = LinkedList()
+        if not self.map[hashed_key]:
+           self.map[hashed_key] = LinkedList()
         
-        self._buckets[hashed_key].append([key, value])
+        self.map[hashed_key].append([key, value])
 
 
     def get(self, key):
         hashed_key = self._hash(key)
-        bucket = self._buckets[hashed_key]
+        bucket = self.map[hashed_key]
 
         if bucket:
             current = bucket.head
@@ -44,10 +44,10 @@ class HashTable:
     def contains(self, key):
         hashed_key = self._hash(key)
 
-        if not self._buckets[hashed_key]:
+        if not self.map[hashed_key]:
             return False
         else:
-            bucket = self._buckets[hashed_key]
+            bucket = self.map[hashed_key]
             current = bucket.head
 
             while current:
