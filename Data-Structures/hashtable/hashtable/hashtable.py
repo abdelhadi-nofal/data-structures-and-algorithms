@@ -55,12 +55,3 @@ class HashTable:
                     return True
                 current = current.next
    
-if __name__ == '__main__':
-    hashtable = HashTable()
-    hashtable.add('Chuck', 10)
-    hashtable.add('Laura', 11)
-    hashtable.add('kcuhC', 14)
-    hashtable.add('aruaL', 15)
-    hashtable.add('Alex', 18)
-    hashtable.add('Ben', 19)
-    hashtable.add('Maddie', 20)
