@@ -29,31 +29,31 @@ def test_hashtable_custom_size_fail():
 
 def test_single_hash_pass():
     hashtable = HashTable()
-    hashtable.add('Chuck', 45)
-    actual = hashtable.get('Chuck')
+    hashtable.add('hadi', 45)
+    actual = hashtable.get('hadi')
     expected = 45
     assert actual == expected
 
 
 def test_single_hash_fail():
     hashtable = HashTable()
-    hashtable.add('Chuck', 40)
-    actual = hashtable.get('Chuck')
+    hashtable.add('hadi', 40)
+    actual = hashtable.get('hadi')
     expected = 45
     assert actual != expected
 
 
 def test_contains_pass_true():
     hashtable = HashTable()
-    hashtable.add('Chuck', 40)
-    expected = hashtable.contains('Chuck')
+    hashtable.add('hadi', 40)
+    expected = hashtable.contains('hadi')
     actual = True
     assert actual == expected
 
 
 def test_contains_pass_false():
     hashtable = HashTable()
-    hashtable.add('Chuck', 40)
+    hashtable.add('hadi', 40)
     expected = hashtable.contains('Daniel')
     actual = False
     assert actual == expected
@@ -61,17 +61,17 @@ def test_contains_pass_false():
 
 def test_contains_pass_with_collsion():
     hashtable = HashTable()
-    hashtable.add('Chuck', 40)
-    hashtable.add('kcuhC', 33)
-    hashtable.add('Ckcuh', 11)
-    expected = hashtable.contains('kcuhC')
+    hashtable.add('hadi', 40)
+    hashtable.add('ahmad', 33)
+    hashtable.add('moe', 11)
+    expected = hashtable.contains('ahmad')
     actual = True
     assert actual == expected
 
 
 def test_contains_fail():
     hashtable = HashTable()
-    hashtable.add('Chuck', 40)
+    hashtable.add('hadi', 40)
     expected = hashtable.contains('Daniel')
     actual = True
     assert actual != expected
@@ -79,9 +79,9 @@ def test_contains_fail():
 
 def test_add_multiple_hash_pass():
     hashtable = HashTable()
-    hashtable.add('Chuck', 45)
-    hashtable.add('kcuhC', 33)
-    hashtable.add('Ckcuh', 11)
-    actual = hashtable.get('Ckcuh')
+    hashtable.add('hadi', 45)
+    hashtable.add('ahmad', 33)
+    hashtable.add('moe', 11)
+    actual = hashtable.get('moe')
     expected = 11
     assert actual == expected
