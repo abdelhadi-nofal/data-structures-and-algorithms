@@ -1,3 +1,5 @@
+from stacks_and_queues.stacks_and_queues.stacks_and_queues import Queue
+
 class Node:
     def __init__(self,value):
         self.value = value
