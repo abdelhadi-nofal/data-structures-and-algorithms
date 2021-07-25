@@ -20,7 +20,7 @@ class HashTable:
         
     def add(self, key, value):
 
-        hashed_key = self._hash(key)
+        hashed_key = self.hash(key)
 
         if not self.map[hashed_key]:
            self.map[hashed_key] = LinkedList()
@@ -29,7 +29,7 @@ class HashTable:
 
 
     def get(self, key):
-        hashed_key = self._hash(key)
+        hashed_key = self.hash(key)
         bucket = self.map[hashed_key]
 
         if bucket:
@@ -42,7 +42,7 @@ class HashTable:
 
 
     def contains(self, key):
-        hashed_key = self._hash(key)
+        hashed_key = self.hash(key)
 
         if not self.map[hashed_key]:
             return False
@@ -55,3 +55,5 @@ class HashTable:
                     return True
                 current = current.next
    
+
+
