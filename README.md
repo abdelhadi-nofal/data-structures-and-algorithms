@@ -8,3 +8,4 @@
 | linked-list       | [linked-list](Data-Structures/linked_list/README.md)              |
 | Stacks-And-Queues | [Stacks-And-Queues ](Data-Structures/stacks_and_queues/README.md) |
 | trees             | [trees ](Data-Structures/trees/README.md)                         |
+| hashtable         | [hashtable ](Data-Structures/hashtable/README.md)                 |
