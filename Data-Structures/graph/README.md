@@ -1,6 +1,22 @@
-# Graph
+# Graphs
 
-### Code Challenge #35
+A graph is a non-linear data structure that can be looked at as a collection of vertices (or nodes) potentially connected by line segments named edges.
+
+## Challenge
+
+Implement a graph, that is represented as an adjacency list, and should include the following methods:
+
+add node
+add edge
+get nodes
+get neighbors
+size
+
+## Approach & Efficiency
+
+Time Complexity: O(N^2) Space Complexity: O(N^2)
+
+## API
 
 Graph Implementation
 
@@ -30,14 +46,3 @@ Graph Implementation
 5. Size()
 
 - Returns the total number of nodes in the graph
-
-### Tests
-
-1. Node can be successfully added to the graph
-2. An edge can be successfully added to the graph
-3. A collection of all nodes can be properly retrieved from the graph
-4. All appropriate neighbors can be retrieved from the graph
-5. Neighbors are returned with the weight between nodes included
-6. The proper size is returned, representing the number of nodes in the graph
-7. A graph with only one node and edge can be properly returned
-8. An empty graph properly returns null
