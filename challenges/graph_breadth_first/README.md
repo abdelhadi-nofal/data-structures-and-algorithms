@@ -6,6 +6,9 @@ Extend your graph object with a breadth-first traversal method that accepts a st
 
 ## White Board :
 
+![image](https://user-images.githubusercontent.com/79086986/127907977-301c7ec9-dcb4-4ead-af75-91c9b5447eb0.png)
+
+
 ## Code :
 
 ```
